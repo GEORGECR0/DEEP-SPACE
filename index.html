@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport"content="with=device-width,initial-scale=1.0">
+<title>DEEP SPACE</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+<script src="script.js"></script>
+</head>
+<body>
+<section id="Home" class="header">
+<nav>
+<a href="index.html"><img src="images/1280px-HD_transparent_picture-fotor-20240224204736.png"></a>
+<div class="nav-links">
+  <ul>
+    <li><a href="#Home">HOME</a></li>
+    <li><a href="#Download">DOWNLOAD</a></li>
+    <li><a href="#About">ABOUT</a></li>
+    <li><a href="#TheCode">THE CODE</a></li>
+  </ul>
+</div>
+</nav>
+<div class="text-box">
+  <h1>THE BEST CLIENT </h1>
+   <h2>FOR BLOXD</h2>
+  <p>Download Deep Space</p>
+  <a href="#Download" class="Download-Button">Download</a>
+</div>
+</section>
+
+
+<section id="Download" class="Downlolad-section">
+<h1>Download</h1>
+
+<div class="row">
+  <div class="Steps">
+    <h3>STEP 1</h3>
+    <p>First You Have To Download TemperMonkey</p>
+    <a class="TemperMonkey-button" href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank">TemperMonkey</a>
+  </div>
+  <div class="Steps">
+    <h3>STEP 2</h3>
+<p>Then You Have To Download The Client</p>
+<a class="Client" href="https://greasyfork.org/en/scripts/489428-deep-space" target="_blank">Client</a>
+  </div>
+  <div class="Steps">
+    <h3>STEP 3</h3>
+<p> Check if the client is on if it's off enable it<br>(IS ON BY DIFFULT)</p>
+</div>
+</div>
+
+
+
+</section>
+<section id="About" class="About-section">
+  <h1>ABOUT</h1>
+
+  </section>
+
+<section id="TheCode" class="THECODE-section">
+
+  <h1>THE CODE</h1>
+  <div class="container">
+    <textarea type="text" id="text" readonly>// ==UserScript==
+      // @name         DEEP SPACE
+      // @namespace    http://tampermonkey.net/
+      // @version      0.1
+      // @description  this is cool
+      // @author       GEORGECR
+      // @match        https://bloxd.io/
+      // @icon         https://i.postimg.cc/NMG91FWH/space-BG-loco.jpg
+      // @license      MIT
+      // @supportURL   https://github.com/damirarh/GreasyForkScripts
+      // @match        https://www.trueachievements.com/game/*/achievements*
+      // @grant        none
+// @downloadURL https://update.greasyfork.org/scripts/489428/DEEP%20SPACE.user.js
+// @updateURL https://update.greasyfork.org/scripts/489428/DEEP%20SPACE.meta.js
+      // ==/UserScript==
+
+      setInterval(function() {
+          'use strict';
+          document.title = "DEEP SPACE";
+          const maintext = document.querySelector('.Title.FullyFancyText');
+          maintext.style.fontFamily = {
+    "name": "Montserrat",
+    "weight": "400",
+    "style": "normal",
+    "source": "Fonts/Montserrat/Montserrat-Regular.ttf"
+};
+          maintext.style.textShadow = " 10px 5px 5px #000000";
+          maintext.style.webkitTextStroke = "none";
+
+
+
+
+              document.querySelector('.Title.FullyFancyText').textContent = "DEEP SPACE";
+              document.querySelector('.Title.FullyFancyText').style.backgroundImage = "https://piskel-imgstore-b.appspot.com/img/68888566-cce3-11ee-a3cd-35b2269c1bce.gif";
+          let background = document.getElementsByClassName("Background");
+          background[0].src = "https://i.postimg.cc/0yTx0G0L/client-BG.jpg";
+          let names = document.getElementsByClassName("AvailableGameText");
+          let imgs = document.getElementsByClassName("AvailableGameImg")
+          let imgedits = document.getElementsByClassName("AvailableGame");
+
+
+
+
+          setInterval(function() {
+          const crosshair = document.querySelector(".CrossHair");
+          if (crosshair) {
+              crosshair.textContent = "";
+              crosshair.style.backgroundImage = "url(https://piskel-imgstore-b.appspot.com/img/68888566-cce3-11ee-a3cd-35b2269c1bce.gif)";
+              crosshair.style.backgroundRepeat = "no-repeat";
+              crosshair.style.backgroundSize = "contain";
+              crosshair.style.width = "25px";
+              crosshair.style.height = "25px";
+          }
+      }, 1000);
+
+
+
+      // Hotbar
+      (function() {
+          'use strict';
+
+          setInterval(function() {
+              const hotbarslots = document.querySelectorAll(".item");
+              const selectedslot = document.querySelectorAll(".SelectedItem");
+              if (hotbarslots) {
+                  hotbarslots.forEach(function(hotbar) {
+                      hotbar.style.borderRadius = "8px";
+                      hotbar.style.borderColor = "#000000";
+                      hotbar.style.backgroundColor = "transparent";
+                      hotbar.style.boxShadow = "none"
+                      hotbar.style.outline = "transparent"
+                  });
+              }
+              if (selectedslot) {
+                  selectedslot.forEach(function(slot) {
+                      slot.style.backgroundColor = "transparent";
+                      slot.style.boxShadow = "none";
+                      slot.style.borderRadius = "15px";
+                      slot.style.borderColor = "#FFFFFF";
+                      slot.style.outline = "transparent";
+                  });
+              }
+          }, 1);
+      })();
+      });
+      </textarea>
+    <button onclick="copy('text')">Copy Text</button>
+  </div>
+
+</section>
+</body>
+</html>
